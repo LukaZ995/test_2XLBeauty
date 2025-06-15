@@ -1,0 +1,48 @@
+@use "../abstract/index" as *;
+
+.story {
+  margin-top: 50px;
+  color: #fff;
+  border: $primaryColor double 3rem;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 30px 30px,
+    rgba(255, 255, 255, 0.3) 0px -12px 30px,
+    rgba(255, 255, 255, 0.2) 0px 4px 6px, rgba(255, 255, 255, 0.2) 0px 4px 13px,
+    rgba(255, 255, 255, 0.2) 0px 4px 6px;
+  text-align: center;
+
+  &.container {
+    width: 80%;
+
+    @media screen and (width < 576px) {
+      width: 90%;
+    }
+  }
+
+  &__box {
+    @include flex(center, center, column nowrap, 0);
+
+    .story__title {
+      text-transform: uppercase;
+      font-size: 50px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .story__underline {
+      width: 45%;
+      height: 20px;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__text {
+    line-height: 24px;
+    font-size: 17px;
+    max-width: 800px;
+    margin: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../abstract/index" as *;
+
+.book {
+  .container {
+    width: 75%;
+  }
+  &__wrapper {
+    background-color: $primaryColor;
+    padding: 4rem 2rem;
+    @include flex(space-between, center);
+
+    @media screen and (width < 1350px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 40px;
+      letter-spacing: 2%;
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 20px #000;
+
+      @media (width < 1023px) {
+        font-size: 1.65rem;
+      }
+
+      @media (width < 768px) {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .book__btn {
+      width: 160px;
+      display: block;
+      @include btn(#000, 20px, 500, #000, 10px 0);
+    }
+  }
+}

@@ -1,0 +1,204 @@
+@use "../abstract/index" as *;
+
+.services {
+  @include flex(flex-start, stretch, wrap, 0);
+  padding-top: 0;
+  color: #fff;
+
+  &__item {
+    flex: 0 0 50%;
+
+    @media screen and (width < 1300px) {
+      flex: 0 0 100%;
+    }
+
+    &--text {
+      padding: 2rem 3rem;
+
+      @media screen and (width < 576px) {
+        padding: 2rem;
+      }
+
+      .services__heading {
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 1.6px;
+        font-weight: 400;
+        text-align: center;
+
+        @media screen and (width < 768px) {
+          text-align: center;
+        }
+      }
+
+      .services__header {
+        @include flex(center, stretch, row, 1rem);
+        margin: 1rem 0;
+
+        @media screen and (width < 576px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        button {
+          @include btn(transparent, 15px, 400, none, 10px 1.5rem);
+          text-transform: uppercase;
+
+          @media screen and (width < 768px) {
+            font-size: 14px;
+            padding: 10px 1rem;
+          }
+
+          &.active {
+            background-color: $primaryColor;
+          }
+        }
+      }
+
+      .services__prices {
+        @include flex(space-between, stretch, row nowrap, 0);
+        margin: 2rem 0;
+
+        &.active {
+          display: block;
+        }
+
+        &#active {
+          margin-top: 5rem;
+        }
+
+        .services__box {
+          @include flex(space-between, stretch, row nowrap, 0);
+
+          .services__name {
+            font-size: 14px;
+
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+
+            &.end {
+              padding-bottom: 1rem;
+            }
+
+            @media screen and (width < 576px) {
+              font-size: 10px;
+              flex-basis: 60%;
+            }
+          }
+
+          .services__price {
+            flex-basis: 110px;
+            border-left: 1px solid white;
+            padding-left: 1rem;
+            font-size: 14px;
+
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+
+            @media screen and (width < 576px) {
+              font-size: 10px;
+              padding-left: 10px;
+              flex-basis: 74px;
+            }
+          }
+        }
+      }
+
+      .services__btns {
+        @include flex(center, center, row, 1rem);
+
+        @media screen and (width < 768px) {
+          gap: 0.5rem;
+        }
+
+        &#btns {
+          margin-top: 4rem;
+        }
+
+        .firstBtn {
+          @include btn(transparent, 15px, 400, #fff, 10px 1.5rem);
+
+          @media screen and (width < 768px) {
+            font-size: 14px;
+          }
+          @media screen and (width < 576px) {
+            padding: 10px 1rem;
+          }
+        }
+
+        .secondBtn {
+          @include btn($primaryColor, 15px, 400, none, 10px 1.5rem);
+
+          @media screen and (width < 768px) {
+            font-size: 14px;
+          }
+          @media screen and (width < 576px) {
+            padding: 10px 1rem;
+          }
+        }
+      }
+    }
+
+    &--img {
+      @media screen and (width < 1300px) {
+        height: 750px;
+      }
+      @media screen and (width < 768px) {
+        height: 350px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__reklama {
+    background-color: $primaryColor;
+    width: 100%;
+
+    .reklama__heading {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 11px;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media screen and (width < 992px) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 10px;
+      }
+    }
+  }
+
+  &__pictures {
+    @include flex(flex-start, stretch, wrap);
+
+    .services__img {
+      flex: 0 0 50%;
+
+      @media screen and (width < 1300px) {
+        flex: 0 0 100%;
+      }
+
+      img {
+        opacity: 0.7;
+        height: 100%;
+        width: 100%;
+
+        @media screen and (width < 768px) {
+          height: 350px;
+        }
+      }
+    }
+  }
+}

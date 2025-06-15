@@ -1,0 +1,112 @@
+@use "../abstract/index" as *;
+
+.appointment__overlay {
+  @include position(absolute, 0, auto, auto, 0, 100%, 100%);
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  @include flex(center, center);
+  display: none;
+
+  &.initiate{
+    display: block;
+  }
+
+  .appointment__form {
+    border-radius: 10px;
+    padding: 3rem 4rem;
+    color: #fff;
+    background: linear-gradient(to right, #c19a93 0%, #c19a93 100%),
+      url("../../assets/img/appointment.jpg");
+    background-size: cover;
+    width: 800px;
+    position: relative;
+    // margin: 0 auto;
+    top: 1.5%;
+    left: 21.5%;
+    
+
+    @media (width<992px) {
+      padding: 2rem;
+      width: 80%;
+    }
+
+    .appointment__heading {
+      font-size: 22px;
+      line-height: 26px;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
+
+      &::after {
+        display: block;
+        content: "";
+        height: 1px;
+        background-color: #fff;
+        margin: 1rem 0;
+      }
+
+      @media (width<576px) {
+        font-size: 17px;
+      }
+    }
+
+    .form__control {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        font-size: 20px;
+
+        @media (width < 576px) {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .appointment__footer {
+      @include flex(flex-end);
+
+      @media (width<576px) {
+        justify-content: center;
+      }
+
+      button {
+        line-height: 12px;
+
+        @include btn(#000, 16px, 300, #000, 15px 3rem);
+      }
+    }
+
+    .appointment__error {
+      text-transform: uppercase;
+      margin-top: 1rem;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 500;
+
+      @media (width<576px) {
+        font-size: 17px;
+      }
+    }
+
+    .appointment__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+
+      @media (width<576px) {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frizersko kozmetički salon 2xl Beauty | Zemun</title>
+
+    <!--Favicon-->
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/img/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/apple-touch-icon.png"
+    />
+
+    <!--Google fonts-->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bentham&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Pinyon+Script&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bentham&family=Comic+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome CDN-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--Custom CSS-->
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!--Header section starts-->
+    <header class="header">
+      <!--Nav section starts-->
+
+      <nav class="nav">
+        <!--Hamburger-->
+        <div class="hamburger" id="hamburger">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line hamburger__line__middle"></div>
+          <div class="hamburger__line"></div>
+        </div>
+        <ul class="nav__list" id="mobile">
+          <li class="nav__list__item nav__list__item--dropdown">
+            <a href="#" class="nav__link">
+              <span data-translate-key="services">Usluge</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <div class="nav__dropdown">
+              <a data-translate-key="depilation" href="#depilacija">Depilacija</a>
+              <a data-translate-key="hairstyle" href="#frizer">Frizura</a>
+              <a data-translate-key="massage" href="#masaza">Masaža</a>
+              <a data-translate-key="manicure" href="#manikir">Manikir</a>
+              <a data-translate-key="visage" href="#visage">Visage pro</a>
+            </div>
+          </li>
+          <li class="nav__list__item">
+            <a
+              data-translate-key="partneri i proizvodi"
+              href="#partners"
+              class="nav__link nav__link--line"
+              >Partneri i proizvodi</a
+            >
+          </li>
+          <li class="nav__list__item">
+            <a
+              data-translate-key="story"
+              href="#story"
+              class="nav__link nav__link--line"
+              >Naša priča</a
+            >
+          </li>
+          <li class="nav__list__item">
+            <a
+              data-translate-key="cv"
+              href="#cv"
+              class="nav__link nav__link--line"
+              >Karijera</a
+            >
+          </li>
+        </ul>
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/apple-touch-icon.png" alt="header logo" />
+        </a>
+        <ul class="nav__list hidden">
+          <li class="nav__list__item">
+            <a
+              data-translate-key="location"
+              href="#location"
+              class="nav__link nav__link--line"
+              >Lokacija</a
+            >
+          </li>
+          <li class="nav__list__item nav__list__item--transform">
+            <a href="tel:+381655305300" class="nav__link">
+              <i class="fa-solid fa-phone"></i>
+              +381 65 53 0 53 00
+            </a>
+          </li>
+          <li class="nav__list">
+            <a data-translate-key="bookNow" class="nav__btn" id="appointmentBtn">
+              Zakaži
+            </a>
+          </li>
+          <li>
+            <div class="flag__container">
+              <div class="main__flag">
+                <img src="assets/img/srb.png" alt="srb">
+              </div>
+
+              <div class="dropdown__visible">
+                <div class="dropdown__flag">
+                  <img src="assets/img/eng.png" alt="eng">
+                </div>
+
+                <div class="dropdown__flag">
+                  <img src="assets/img/rus.png" alt="rus">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!--Nav section ends-->
+
+      <div class="header__content">
+        <h1 class="header__heading">
+          2XL <br />
+          <span>Beauty</span>
+        </h1>
+
+        <a href="#services" class="header__arrow">
+          <img
+            src="assets/img/header-arrow.png"
+            alt="header arrow"
+            class="header__img-arrow"
+          />
+        </a>
+
+        <div
+          class="header__line"
+          id="line1"
+          style="animation-name: headerLines1"
+        ></div>
+        <div
+          class="header__line"
+          id="line2"
+          style="animation-name: headerLines1"
+        ></div>
+        <div
+          class="header__line"
+          id="line3"
+          style="animation-name: headerLines2"
+        ></div>
+        <div
+          class="header__line"
+          id="line4"
+          style="animation-name: headerLines2"
+        ></div>
+      </div>
+    </header>
+    <!--Header section ends-->
+
+    <!--Features section starts-->
+    <section class="features container">
+      <div class="features__item">
+        <img
+          src="assets/img/feature1.png"
+          alt="one image"
+          class="features__img"
+        />
+      </div>
+      <div class="features__item">
+        <img
+          src="assets/img/feature2.png"
+          alt="second image"
+          class="features__img"
+        />
+      </div>
+      <div class="features__item">
+        <img
+          src="assets/img/feature3.png"
+          alt="third image"
+          class="features__img"
+        />
+      </div>
+      <div class="features__item">
+        <img
+          src="assets/img/feature4.png"
+          alt="fourth image"
+          class="features__img"
+        />
+      </div>
+    </section>
+    <!--Features section ends-->
+
+    <!--Services section starts-->
+    <section class="services" id="services">
+      <!--ZENSKI FRIZER-->
+
+      <div class="services__item services__item--text">
+        <h2 class="services__heading" id="frizer">ženski frizer</h2>
+        <div class="services__header">
+          <button type="button" class="active">matrix</button>
+          <button type="button">redken</button>
+          <button type="button">tretmani</button>
+        </div>
+
+        <div class="services__prices active">
+          <div class="services__box">
+            <p class="services__name">Feniranje</p>
+            <p class="services__price">od<span> 990</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Šišanje + feniranje</p>
+            <p class="services__price">od<span> 2000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Presa i figaro za feniranje</p>
+            <p class="services__price">od<span> 300</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Pranje i sušenje</p>
+            <p class="services__price">od<span> 600</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Feniranje nadogradnje</p>
+            <p class="services__price">od<span> 1700</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Šišanje + feniranje nadogradnje</p>
+            <p class="services__price">od<span> 2500</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Pranje i sušenje nadogradnje</p>
+            <p class="services__price">od<span> 1000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Šišanje šiški</p>
+            <p class="services__price">od<span> 450</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Šišanje sve dužine</p>
+            <p class="services__price">od<span> 1800</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Feniranje klipsi sa pranjem</p>
+            <p class="services__price">od<span> 1100</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name end">Feniranje klipsi bez pranja</p>
+            <p class="services__price">od<span> 900</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Farbanje cele dužine dve boje</p>
+            <p class="services__price">od<span> 4000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Farbanje donetom bojom</p>
+            <p class="services__price">od<span> 1300</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Blajhanje bez bondera</p>
+            <p class="services__price">od<span> 3000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Preliv</p>
+            <p class="services__price">od<span> 2000</span></p>
+          </div>
+        </div>
+        <div class="services__btns">
+          <button class="firstBtn">Zakaži</button>
+          <button class="secondBtn">Sve cene</button>
+        </div>
+      </div>
+      <div class="services__item services__item--img">
+        <img
+          src="assets/img/services1.png"
+          alt="services img one"
+          class="services__img"
+        />
+      </div>
+
+      <!--MASAZA-->
+
+      <div class="services__item services__item--img">
+        <img
+          src="assets/img/services2.png"
+          alt="services img two"
+          class="services__img two"
+        />
+      </div>
+
+      <div class="services__item services__item--text">
+        <h2 class="services__heading two">Masaža</h2>
+        <div class="services__header">
+          <button class="active">regular</button>
+          <button>anticelulit</button>
+          <button>mršavljenje</button>
+        </div>
+
+        <div class="services__prices active">
+          <div class="services__box">
+            <p class="services__name">Relax masaža (45 min)</p>
+            <p class="services__price">od<span> 2300</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Relax masaža (60 min)</p>
+            <p class="services__price">od<span> 2800</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Relax masaža (90 min)</p>
+            <p class="services__price">od<span> 3300</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name end">Relax masaža (120 min)</p>
+            <p class="services__price">od<span> 5000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Terapeutska masaža (30 min)</p>
+            <p class="services__price">od<span> 2200</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Terapeutska masaža (45 min)</p>
+            <p class="services__price">od<span> 2600</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name end">Terapeutska masaža (60 min)</p>
+            <p class="services__price">od<span> 3100</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Sportska masaža (45 min)</p>
+            <p class="services__price">od<span> 3100</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name end">Sportska masaža (60 min)</p>
+            <p class="services__price">od<span> 3500</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name end">Antistres masaža (60 min)</p>
+            <p class="services__price">od<span> 3000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name end">Theragun 15 min</p>
+            <p class="services__price">od<span> 500</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Theragun 30 min</p>
+            <p class="services__price">od<span> 1000</span></p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Theragun 45 min</p>
+            <p class="services__price">od<span> 1300</span></p>
+          </div>
+        </div>
+        <div class="services__btns">
+          <button class="firstBtn">Zakaži</button>
+          <button class="secondBtn">Sve cene</button>
+        </div>
+      </div>
+
+      <!--VISAGE PRO-->
+
+      <div class="services__item services__item--text">
+        <h2 class="services__heading" id="frizer">visage pro</h2>
+        <div class="services__header">
+          <button class="active">promo</button>
+          <button>paketi</button>
+          <button>lice</button>
+        </div>
+
+        <div class="services__prices active">
+          <div class="services__box">
+            <p class="services__name">Ultrazvučna kavitacija:</p>
+            <p class="services__price"></p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name">Stomak</p>
+            <p class="services__price">2.700</p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name">Butine</p>
+            <p class="services__price">2.700</p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name">Ruke</p>
+            <p class="services__price">2.300</p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name end">Listovi</p>
+            <p class="services__price">2.300</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">
+              Ultrazvučna kavitacija (paket 10 tretmana):
+            </p>
+            <p class="services__price"></p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name">Stomak</p>
+            <p class="services__price">2.700</p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name">Butine</p>
+            <p class="services__price">2.700</p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name">Ruke</p>
+            <p class="services__price">2.300</p>
+          </div>
+          <div class="services__box" style="padding-left: 20px">
+            <p class="services__name end">Listovi</p>
+            <p class="services__price">2.300</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Kombinovani paket - 10 tretmana</p>
+            <p class="services__price">23.000</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Radiotalasni lifting - 1 regija</p>
+            <p class="services__price">3.000</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Radiotalasni lifting paket 5 + 2</p>
+            <p class="services__price">15.000</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Radiotalasni lifting paket 10 + 2</p>
+            <p class="services__price">28.000</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">
+              Kombinacija kavitacija + vakum + RTV zatezanje
+            </p>
+            <p class="services__price">6.000</p>
+          </div>
+          <div class="services__box">
+            <p class="services__name">Paket 5 + 2 GRATIS</p>
+            <p class="services__price">30.000</p>
+          </div>
+        </div>
+        <div class="services__btns">
+          <button class="firstBtn">Zakaži</button>
+          <button class="secondBtn">Sve cene</button>
+        </div>
+      </div>
+      <div class="services__item services__item--img">
+        <img
+          src="assets/img/Visage Pro za Lice i Telo.png"
+          alt="visage pro za lice i telo"
+          class="services__img"
+        />
+      </div>
+
+      <!--REKLAMA-->
+
+      <div class="services__reklama">
+        <h2 class="reklama__heading">your beauty is our priority</h2>
+      </div>
+
+      <!--GALERIJA SLIKA-->
+
+      <div class="services__pictures">
+        <div class="services__img">
+          <img src="assets/img/manikir.jpg" alt="slika manikir" />
+        </div>
+        <div class="services__img">
+          <img src="assets/img/Depilacija.jpg" alt="slika depilacija" />
+        </div>
+
+        <div class="services__item services__item--text">
+          <h2 class="services__heading">manikir i pedikir</h2>
+          <div class="services__header">
+            <button class="active">manikir</button>
+            <button>pedikir</button>
+          </div>
+
+          <div class="services__prices active">
+            <div class="services__box">
+              <p class="services__name">Lakiranje</p>
+              <p class="services__price">od<span> 700</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Lak frenč</p>
+              <p class="services__price">od<span> 900</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Manikir</p>
+              <p class="services__price">od<span> 1300</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Manikir ruski</p>
+              <p class="services__price">od<span> 1700</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Skidanje gela laka ruke</p>
+              <p class="services__price">od<span> 900</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Skidanje gela ruke</p>
+              <p class="services__price">od<span> 1100</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Gel lak</p>
+              <p class="services__price">od<span> 2000</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Gel lak frenč</p>
+              <p class="services__price">od<span> 2700</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Manikir + gel lak</p>
+              <p class="services__price">od<span> 2500</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Manikir + gel lak frenč</p>
+              <p class="services__price">od<span> 2900</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Manikir ruski + gel lak</p>
+              <p class="services__price">od<span> 2800</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Manikir ruski + gel lak frenč</p>
+              <p class="services__price">od<span> 3200</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Rubber baza + manikir</p>
+              <p class="services__price">od<span> 2300</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Rubber baza sa bojom + manikir</p>
+              <p class="services__price">od<span> 2600</span></p>
+            </div>
+            <div class="services__box">
+              <p class="services__name">Rubber baza sa frenčom + manikir</p>
+              <p class="services__price">od<span> 2900</span></p>
+            </div>
+          </div>
+          <div class="services__btns">
+            <button class="firstBtn">Zakaži</button>
+            <button class="secondBtn">Sve cene</button>
+          </div>
+        </div>
+
+        <!--PEDIKIR-->
+
+        <div class="services__item services__item--text">
+          <h2 class="services__heading">Depilacija</h2>
+
+          <div class="services__prices active" id="active">
+            <div class="services__box">
+              <p class="services__name">Ruke</p>
+              <p class="services__price">800</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Pola ruku</p>
+              <p class="services__price">600</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Plitke prepone</p>
+              <p class="services__price">700</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Duboke prepone</p>
+              <p class="services__price">1.000</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Brazilika</p>
+              <p class="services__price">1.400</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Cele noge</p>
+              <p class="services__price">2.400</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Pola nogu</p>
+              <p class="services__price">1.000</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Nausnice</p>
+              <p class="services__price">300</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Pazuh</p>
+              <p class="services__price">500</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Oblikovanje i korekcija obrva</p>
+              <p class="services__price">600</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Farbanje obrva</p>
+              <p class="services__price">600</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Noge + plitke prepone</p>
+              <p class="services__price">1.700</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Noge + duboke prepone</p>
+              <p class="services__price">1.900</p>
+            </div>
+
+            <div class="services__box">
+              <p class="services__name">Noge + brazilika</p>
+              <p class="services__price">2.400</p>
+            </div>
+          </div>
+
+          <div class="services__btns" id="btns">
+            <button class="firstBtn">Zakaži</button>
+            <button class="secondBtn">Sve cene</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Services section ends-->
+
+    <!--Locaton section starts-->
+    <section class="location">
+      <div class="location__item location__item--text">
+        <h2 class="location__heading">Lokacija</h2>
+        <ul class="location__list">
+          <li class="location__list__item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="location__link">Vrtlarska 7a, Zemun</p>
+          </li>
+          <li class="location__list__item">
+            <i class="fa-solid fa-phone"></i>
+            <p class="location__link">+381 65 53 0 53 00</p>
+          </li>
+          <li class="location__list__item">
+            <i class="fa-solid fa-clock"></i>
+            <p>PON - NED 8:00 - 21:00</p>
+          </li>
+          <li class="location__list__item">
+            <i class="fa-solid fa-envelope">
+              <a  href="#" class="location__link">2xlbeautyofficial@gmail.com</a>
+            </i>
+          </li>
+          <li class="location__list__item">
+            <i class="fa-solid fa-square-parking"></i>
+            <p style="text-transform: uppercase">
+              besplatan parking ispred lokala
+            </p>
+          </li>
+          <li class="location__list__item">
+            <p>*Royality program</p>
+          </li>
+          <li class="location__item__list">Kafa, čokolada i sok za ugođaj</li>
+        </ul>
+        <div class="location__social">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+      </div>
+      <div class="location__item location__item--img">
+        <img src="assets/img/lokacija.jpg" alt="" class="location__img" />
+      </div>
+    </section>
+    <!--Location section ends-->
+
+    <!--Story section starts-->
+    <section class="story container">
+      <div class="story__box">
+        <h3 class="story__title">Naša priča</h3>
+        <img src="assets/img/story.svg" alt="" class="story__underline" />
+      </div>
+      <p class="story__text">
+        Od malih nogu kreneš da ideš kod frizera, sediš u nekoj kul stolici, a
+        oko tebe svi gledaju da te zabavljaju kako bi frizer mogao da te ošiša,
+        nije ti bitno ko te šiša i kako. Dok kada odrasteš, želiš što bolju
+        frizuru, imaš jednog frizera i ne menjaš ga, naravno ako je dobar. Želiš
+        što kvalitetnije proizvode i preparate, gledaš kakvo je mesto i kakvi su
+        ljudi gde ideš.
+      </p>
+      <p class="story__text">
+        Suprug i ja smo došli na ideju da otvorimo salon lepote, jer znamo
+        koliko je važno da uvek imaš svoje mesto gde da odeš, gde si prioritet,
+        gde su ljudi oko tebe prijatni. Želimo da vam napravimo ugođaj kakav
+        nema nigde, da vam pružimo najbolje usluge frizera, masaža, manikira i
+        pedikira i još mnogo toga.
+      </p>
+      <p class="story__text">
+        U našem salonu ćeš moci u jednom terminu da se doteraš za bilo koju
+        proslavu, događaj. Isto tako, ukoliko želiš samo da se opustiš i odmoriš
+        od napornog radnog dana, imamo razne masaže koje će ti u tome pomoći!
+      </p>
+    </section>
+    <!--Story section ends-->
+
+    <!--CV section starts-->
+    <section class="cv">
+      <div class="cv__wrapper container">
+        <div class="cv__content">
+          <h2 class="cv__heading">Želiš da budeš deo naše priče?</h2>
+          <p class="cv__text">
+            "Ako si strastven, inovativan i spreman za nove izazove, pošalji nam
+            svoj CV i otvori vrata svetu neograničenih mogućnosti. Zajedno
+            možemo pisati sledeće poglavlje!"
+          </p>
+        </div>
+        <button class="cv__btn">pošalji</button>
+      </div>
+    </section>
+    <!--CV section ends-->
+
+    <!--Moto section starts-->
+    <section class="moto">
+      <h2 class="moto__heading">
+        <span>prepusti se</span>
+        <br />
+        <span>visokom</span>
+        <span class="custom">kvalitetu</span>
+        <span>naših usluga</span>
+      </h2>
+    </section>
+    <!--Moto section ends-->
+
+    <!--Partners section starts-->
+    <section class="partners">
+      <div class="partners__item partners__item--img">
+        <img src="assets/img/partners.jpg" alt="partneri" />
+      </div>
+      <div class="partners__item">
+        <h2 class="partners__heading">partneri</h2>
+        <p class="partners__text">
+          Sa našim partnerima nudimo ti najkvalitetnije proizvode i usluge
+        </p>
+        <div class="partners__pictures">
+          <div class="partners__gallery">
+            <img
+              src="assets/img/redkenlogo.png"
+              alt="redken logo"
+              class="redken"
+            />
+          </div>
+          <div class="partners__gallery">
+            <img
+              src="assets/img/matrixlogo.png"
+              alt="matrix logo"
+              class="matrix"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Partners section ends-->
+
+    <!--BOOK section starts-->
+    <section class="book__wrapper container">
+      <p>Ovde možeš zakazati svoj termin kod nas</p>
+      <button class="book__btn appointment__btn">Zakaži</button>
+    </section>
+    <!--BOOK section ends-->
+
+    <!--Footer section starts-->
+    <section class="footer">
+      <div class="footer__wrapper container">
+        <div class="footer__item footer__item--all">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logo (1).png" alt="logo img" />
+          </a>
+          <p>Your beauty is Our Priority!</p>
+          <button class="footer__btn appointment__btn">Zakaži</button>
+          <div class="footer__social">
+            <a
+              href="mailto:2xlbeautyofficial@gmail.com"
+              class="fa-solid fa-envelope"
+            ></a>
+            <a
+              href="https://www.instagram.com/2xl.beauty/"
+              class="fa-brands fa-instagram"
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61565617550100&mibextid=LQQJ4d&rdid=AEYmgB8lYNofAzFK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FdJ3d8Cx1ikEXQhwu%2F%3Fmibextid%3DLQQJ4d#"
+              class="fa-brands fa-facebook"
+            ></a>
+          </div>
+        </div>
+        <div class="footer__item">
+          <h4 class="footer__heading">Usluge</h4>
+          <ul class="footer__list">
+            <li class="footer__list__item">
+              <a href="#" class="footer__link">Ženski frizer</a>
+            </li>
+
+            <li class="footer__list__item">
+              <a href="#" class="footer__link">Masaže</a>
+            </li>
+            <li class="footer__list__item">
+              <a href="#" class="footer__link">Manikir i pedikir</a>
+            </li>
+            <li class="footer__list__item">
+              <a href="#" class="footer__link">Depilacija</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__heading">kontakt</h3>
+          <ul class="footer__list">
+            <li class="footer__list__item">Vrtlarska 7a, Zemun</li>
+            <li class="footer__list__item">+381 65 53 0 53 00</li>
+            <li class="footer__list__item">
+              <a href="mailto:2xlbeautyofficial@gmail.com"
+                >2xlbeautyofficial@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__heading">radno vreme</h3>
+          <p class="footer__time">PON - NED 8:00 - 21:00</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>
+          © <span>2025</span> 2XL Beauty |
+          <a href="#">Politika privatnosti</a>
+        </p>
+        <div>
+          Designed by 
+          <a href="#"">DinaDoesit.com</a>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer section ends-->
+
+    <!--Navigation btn section starts-->
+    <a href="#" 
+    class="fixed__btn fa-solid fa-chevron-up" 
+    aria-label="Click hero to go on top of page">
+    </a>
+    <!--Navigation btn section ends-->
+
+    <!--Appoitment section starts-->
+    <div class="appointment__overlay">
+      <form action="" class="appointment__form" id="form1" required>
+          <h3 class="appointment__heading">Zakazivanje termina za</h3>
+          <div class="form__control">
+              <input type="radio" name="app" id="f">
+              <label for="f">Ženski frizer</label>
+          </div>
+          <div class="form__control">
+              <input type="radio" name="app" id="m">
+              <label for="m">Masaže</label>
+          </div>
+          <div class="form__control">
+              <input type="radio" name="app" id="p">
+              <label for="p">Manikir i pedikir</label>
+          </div>
+          <div class="form__control">
+              <input type="radio" name="app" id="d">
+              <label for="d">Depilacija</label>
+          </div>
+
+          <div class="appointment__footer">
+              <button type="submit">Dalje</button>
+          </div>
+          <p class="appointment__error"></p>
+          <i class="fa-solid fa-xmark appointment__close" id="appointment__close"></i>
+      </form>
+    </div> 
+    <!--Apotiment section ends-->
+
+    <!--Time and date section starts-->
+    <div class="contact__timeAndDate">
+      <form action="" class="contact__form" required>
+      <h3 class="timeAndDate__heading">Izaberi datum i vreme</h3>
+      <div class="form__content">
+          <div class="contact__calendar">
+              <input type="date" id="date-picker">
+          </div>
+          <div class="time-slots">
+              <button>08:00</button>
+              <button>09:00</button>
+              <button>10:00</button>
+              <button>11:00</button>
+              <button>12:00</button>
+              <button>13:00</button>
+              <button>14:00</button>
+              <button>15:00</button>
+              <button>16:00</button>
+              <button>17:00</button>
+              <button>18:00</button>
+              <button>19:00</button>
+              <button>20:00</button>
+          </div>
+        </div>
+        <div class="contact__footer">
+          <button type="button">Nazad</button>
+          <button type="submit">Dalje</button>
+        </div>
+      </form>
+    </div>
+    <!--Time and date section ends-->
+
+    <!--Contact section starts-->
+    <div class="contact__overlay">
+      <form action="" class="contact__form" required>
+          <h3 class="contact__heading">Unesi svoje podatke</h3>
+          <div class="contact__wrapper">
+              <div class="form__control">
+                  <label for="name">Ime i prezime</label>
+                  <input id="name" type="text" placeholder="Unesite ime i prezime">
+              </div>
+              <div class="form__control">
+                  <label for="email">Email adresa</label>
+                  <input id="email" type="email" placeholder="Unesite email adresu">
+              </div>
+              <div class="form__control">
+                  <label for="telephone">Telefon</label>
+                  <input id="telephone" type="text" placeholder="Unesite broj telefona">
+              </div>
+              <div class="form__control">
+                  <label for="date">Datum</label>
+                  <input id="date" type="date">
+              </div>
+              <div class="form__control">
+                  <label for="time">Vreme</label>
+                  <input id="time" type="time">
+              </div>
+          </div>
+          <div class="contact__footer">
+              <button type="button">Nazad</button>
+              <button type="submit">Zakaži</button>
+          </div>
+          <p class="contact__error"></p>
+          <i class="fa-solid fa-xmark contact__close"></i>
+      </form>
+    </div> 
+    <!--Contact section ends-->
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

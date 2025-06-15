@@ -1,0 +1,77 @@
+@use "../abstract/index" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition: 0.4s linear;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  overflow-x: hidden;
+  line-height: 1.4;
+  background-color: #000;
+  position: relative;
+}
+
+@media screen and (width < 576px) {
+  body {
+    font-size: 85%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bentham", serif;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+
+  @media screen and (width < 576px) {
+    width: 80%;
+  }
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+section {
+  padding: 70px 0;
+}
+
+.fixed__btn {
+  background-color: #fff;
+  color: $primaryColor;
+  padding: 1rem;
+  @include position(fixed, auto, 1rem, 1rem, auto);
+  z-index: 1000;
+
+  &.hide{
+    display: none;
+  }
+
+  &:hover {
+    background-color: white;
+  }
+
+  @media (width < 768px) {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+@mixin flex($justify: flex-start, $align: stretch, $flow: row nowrap, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+  gap: $gap;
+}
+
+@mixin btn(
+  $bgcolor: $primaryColor,
+  $fontSize: 1rem,
+  $fontWeight: 500,
+  $borderColor: white,
+  $padding
+) {
+  background-color: $bgcolor;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  border: 1px solid $borderColor;
+  padding: $padding;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 1.5px;
+
+  @media screen and (width < 768px) {
+    .header .nav__list .nav__btn {
+      font-size: 1rem;
+    }
+  }
+}
+
+@mixin position(
+  $position: absolute,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $width: auto,
+  $height: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+}

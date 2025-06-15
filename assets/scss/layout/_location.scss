@@ -1,0 +1,118 @@
+@use "../abstract/index" as *;
+
+.location {
+  padding: 0;
+  height: 100vh;
+  @include flex();
+
+  @media screen and (width < 1200px) {
+    flex-direction: column;
+  }
+
+  .location__item {
+    &--text {
+      flex: 1;
+      background-image: url("../../assets/img/locationLogo.png");
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      @include flex(center, center, column);
+      padding: 0 3rem;
+      color: #fff;
+      z-index: 0;
+
+      &::after {
+        @include position(absolute, 0, auto, auto, 0, 100%, 100%);
+        display: block;
+        content: "";
+        background: linear-gradient(to right, #c49c94 0%, #c49c94 100%);
+        opacity: 0.98;
+        z-index: -1;
+      }
+
+      @media screen and (width < 1200px) {
+        width: 80%;
+        margin: auto;
+        padding: 2rem;
+        margin-top: -110px;
+        z-index: 4;
+      }
+
+      .location__heading {
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 84px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+
+        @media screen and (width < 768px) {
+          font-size: 32px;
+          line-height: 38px;
+        }
+      }
+
+      .location__list {
+        &__item {
+          @include flex(flex-start, center, row, 1rem);
+          margin-bottom: 1rem;
+          font-size: 22px;
+
+          @media screen and (width < 768px) {
+            font-size: 15px;
+          }
+
+          i {
+            color: #000;
+          }
+
+          .location__link {
+            color: #fff;
+          }
+        }
+      }
+
+      .location__social {
+        margin-top: 1rem;
+        cursor: pointer;
+
+        i {
+          color: #000;
+          font-size: 2rem;
+          margin-top: 4rem;
+
+          @media screen and (width < 768px) {
+            font-size: 1rem;
+          }
+
+          &:not(:last-child) {
+            border-right: 1px solid #000;
+            padding-right: 1rem;
+          }
+
+          &:not(:first-child) {
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+
+    &--img {
+      flex: 2;
+
+      @media screen and (width < 1200px) {
+        order: -1;
+        height: 235px;
+      }
+
+      .location__img {
+        height: 100%;
+        opacity: 0.6;
+
+        @media screen and (width < 1200px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

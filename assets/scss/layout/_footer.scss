@@ -1,0 +1,151 @@
+@use "../abstract/index" as *;
+
+.footer {
+  background-color: $primaryColor;
+  margin-top: 5rem;
+  padding: 0; //ubijanje globalnog stila
+
+  &__wrapper {
+    padding: 70px 0px;
+    @include flex(space-between, flex-start, wrap);
+    color: white;
+
+    @media screen and (width < 1200px) {
+      justify-content: center;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .footer__item {
+      flex: 1;
+
+      @media screen and (width < 1200px) {
+        flex: 0 0 100%;
+      }
+
+      &__all {
+        flex: 2;
+      }
+
+      .footer__logo {
+        display: block;
+
+        img {
+          width: 90px;
+          height: 140px;
+        }
+
+        & + p {
+          font-weight: 500;
+          line-height: 20px;
+
+          @media screen and (width < 1200px) {
+            display: none;
+          }
+        }
+      }
+
+      .footer__btn {
+        display: block;
+        width: 140px;
+        margin: 1rem 0;
+        @include btn(#000, 14px, 600, #000, 10px 0);
+
+        @media screen and (width < 1200px) {
+          display: none;
+          margin: 1rem auto;
+        }
+      }
+
+      .footer__social {
+        @media screen and (width < 1200px) {
+          display: none;
+        }
+
+        a {
+          color: #000;
+          font-size: 1rem;
+
+          &:not(:last-child) {
+            border-right: 2px solid #000;
+            padding-right: 1rem;
+          }
+
+          &:not(:first-child) {
+            padding-left: 1rem;
+          }
+        }
+      }
+
+      .footer__heading {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-family: "Montserrat", sans-serif;
+
+        @media screen and (width < 1200px) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .footer__list {
+        &__item {
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+
+          a {
+            color: #fff;
+          }
+
+          .footer__link {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            display: inline-block;
+
+            &:hover {
+              transform: translateX(15px);
+            }
+          }
+        }
+      }
+
+      .footer__time {
+        font-weight: 500;
+        font-size: 15px;
+      }
+    }
+  }
+  .bottom {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    height: 70px;
+    @include flex(center, stretch, column);
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+
+    div {
+      font-size: 10px;
+      font-weight: 400;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}

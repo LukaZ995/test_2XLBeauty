@@ -1,0 +1,65 @@
+@use "../abstract/index" as *;
+
+.partners {
+  @include flex(flex-start, center, row, 2rem);
+
+  @media screen and (width < 1200px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    flex: 0 0 47%;
+
+    &--img {
+      img {
+        border-radius: 5px;
+      }
+    }
+
+    &:nth-child(2) {
+      padding: 2rem;
+      text-align: center;
+      padding: 0 4rem;
+
+      .partners__heading {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 60px;
+        color: #fff;
+        text-transform: uppercase;
+
+        @media screen and (width < 768px) {
+          font-size: 34px;
+          line-height: 40px;
+        }
+      }
+
+      .partners__text {
+        font-size: 22px;
+        line-height: 35px;
+        color: #fff;
+        max-width: 505px;
+        margin: 2rem auto;
+
+        @media screen and (width < 768px) {
+          font-size: 15px;
+          line-height: 23px;
+        }
+      }
+
+      .partners__pictures {
+        @include flex(space-between, center, nowrap);
+        gap: 3rem;
+
+        &__img {
+          flex-basis: 45%;
+
+          @media screen and (width < 768px) {
+            width: 50px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

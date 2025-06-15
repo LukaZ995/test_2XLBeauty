@@ -1,0 +1,21 @@
+@use "../abstract/index" as *;
+
+.features {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    @media screen and (width < 992px) {
+      .features__item {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    @media screen and (width < 768px) {
+      .features__item {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

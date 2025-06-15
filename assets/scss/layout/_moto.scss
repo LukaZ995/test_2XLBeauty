@@ -1,0 +1,40 @@
+@use "../abstract/index" as *;
+
+.moto {
+  text-align: center;
+  color: #fff;
+  max-width: 1400px;
+  margin: auto;
+
+  &__heading {
+    span {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: 11px;
+      color: white;
+
+      @media screen and (width < 1200px) {
+        font-size: 21px;
+        line-height: 26px;
+        letter-spacing: 5.5px;
+      }
+    }
+
+    .custom {
+      font-weight: 400;
+      font-size: 80px;
+      line-height: 72px;
+      font-family: "Pinyon Script", cursive;
+      color: $primaryColor;
+      text-transform: lowercase;
+      padding: 0 2rem;
+
+      @media screen and (width < 1200px) {
+        font-size: 46px;
+        line-height: 37px;
+      }
+    }
+  }
+}

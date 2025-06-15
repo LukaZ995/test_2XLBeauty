@@ -1,0 +1,133 @@
+@use "../abstract/index" as *;
+
+.contact__overlay {
+  @include position(fixed, 0, auto, auto, 0, 100%, 100%);
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  @include flex(center, center);
+  display: none;
+
+  .contact__form {
+    border-radius: 10px;
+    padding: 3rem 4rem;
+    color: #fff;
+    background: linear-gradient(to right, #c19a93 0%, #c19a93 100%),
+      url("../../assets/img/appointment.jpg");
+    background-size: cover;
+    width: 800px;
+    position: relative;
+    top: 1.5%;
+    left: 21.5%;
+
+    @media (width<992px) {
+      padding: 2rem;
+      width: 80%;
+    }
+
+    .contact__heading {
+      font-size: 22px;
+      line-height: 26px;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
+
+      &::after {
+        display: block;
+        content: "";
+        height: 1px;
+        background-color: #fff;
+        margin: 1rem 0;
+      }
+
+      @media (width<576px) {
+        font-size: 17px;
+      }
+    }
+
+    .contact__wrapper {
+      @include flex(space-between, stretch, wrap);
+      row-gap: 1rem;
+
+      .form__control {
+        flex: 0 0 47%;
+
+        @media (width<576px) {
+          flex: 0 0 100%;
+        }
+
+        label {
+          display: block;
+          font-size: 14px;
+        }
+
+        input {
+          border-radius: 5px;
+          padding: 10px;
+          margin-top: 10px;
+          width: 100%;
+          color: #000;
+
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .contact__footer {
+      @include flex(flex-end, stretch, row, 1rem);
+      margin-top: 2rem;
+
+      @media (width<768px) {
+        justify-content: center;
+      }
+
+      button {
+        @include btn(transparent, 15px, 500px, none, 10px 2.5rem);
+
+        @media (width<576px) {
+          padding: 10px 1rem;
+        }
+
+        &[type="button"] {
+          background: transparent;
+        }
+
+        &[type="submit"] {
+          background-color: #000;
+        }
+      }
+    }
+
+    .contact__error {
+      text-transform: uppercase;
+      margin-top: 1rem;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 500;
+
+      @media (width<576px) {
+        font-size: 14px;
+      }
+    }
+
+    .contact__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+
+      @media (width<576px) {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+}

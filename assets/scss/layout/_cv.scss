@@ -1,0 +1,68 @@
+@use "../abstract/index" as *;
+
+.cv {
+  &__wrapper {
+    padding: 3rem;
+    background-color: $primaryColor;
+    @include flex(space-between, center, wrap, 1rem);
+    border-radius: 5px;
+
+    @media screen and (width < 1300px) {
+      justify-content: center;
+      text-align: center;
+    }
+
+    @media screen and (width < 576px) {
+      padding: 2rem;
+    }
+
+    .cv__content {
+      flex: 0 0 70%;
+
+      @media screen and (width < 1300px) {
+        flex: 0 0 100%;
+      }
+
+      .cv__heading {
+        font-size: 40px;
+        line-height: 64px;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 1rem;
+        font-family: "Montserrat", sans-serif;
+        text-shadow: 2px 2px 20px #000;
+
+        @media screen and (width < 1405px) {
+          line-height: 39px;
+          font-size: 30px;
+        }
+
+        @media screen and (width < 1200px) {
+          line-height: 39px;
+          font-size: 28px;
+        }
+      }
+
+      .cv__text {
+        font-weight: 500;
+        line-height: 25px;
+        color: #fff;
+
+        @media screen and (width < 1200px) {
+          text-align: center;
+        }
+      }
+    }
+
+    .cv__btn {
+      line-height: 27px;
+      text-transform: uppercase;
+      @include btn(#000, 22px, 600, #000, 10px 2rem);
+
+      @media screen and (width < 1200px) {
+        margin-top: 1rem;
+        font-size: 17px;
+      }
+    }
+  }
+}
